@@ -40,9 +40,9 @@
         <div class="col-md-9">
           <!-- Home Main Image -->
           <img src="{{ listing.photo_main.url }}" alt="" class="img-main img-fluid mb-3">
-          <!-- Thumbnails 1 -->
+          <!-- Thumbnails  -->
           <div class="row mb-5 thumbs">
-            {% if listing.photo_1 %}
+            {% if listing.photo_main_1 %}
                 <div class="col-md-2">
                     <a href="{{ listing.photo_main_1.url }}" data-lightbox="home-images">
                         <img src="{{ listing.photo_main_1.url }}" alt="" class="img-fluid">
@@ -50,7 +50,7 @@
                 </div>
             {% endif %}
             <!-- Thumbnails 2 -->
-            {% if listing.photo_2 %}
+            {% if listing.photo_main_2 %}
                 <div class="col-md-2">
                     <a href="{{ listing.photo_main_2.url }}" data-lightbox="home-images">
                         <img src="{{ listing.photo_main_2.url }}" alt="" class="img-fluid">
@@ -59,7 +59,7 @@
             {% endif %}
 
             <!-- Thumbnails 3 -->
-            {% if listing.photo_3 %}
+            {% if listing.photo_main_3 %}
                 <div class="col-md-2">
                 <a href="{{ listing.photo_main_3.url }}" data-lightbox="home-images">
                     <img src="{{ listing.photo_main_3.url }}" alt="" class="img-fluid">
