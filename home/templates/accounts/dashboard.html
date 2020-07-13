@@ -47,7 +47,7 @@
                 {% for contact in contacts  %}
                   <tr>
                     <td>{{ contact.id }}</td>
-                    <td>{{ contac.listing }}</td>
+                    <td>{{ contact.listing }}</td>
                     <td>
                       <a class="btn btn-light" href="{% url 'listing' contact.listing_id %}">View Listing</a>
                     </td>

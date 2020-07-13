@@ -20,9 +20,9 @@ def contact(request):
             if has_contacted:
                 messages.error(request, 'You have already made inquiry for this listing')
                 return redirect('/listings/'+listing_id)
-        contact = Contacts(listing=listing, listing_id=listing_id, name=name, email=email, phone=phone, messages=message, user_id=user_id)
+        contact = Contacts(listing=listing, listing_id=listing_id, name=name, email=email, phone=phone, message=message, user_id=user_id)
         
         contact.save()
         
-        message.success(request, 'Your request has been submitted, and a realtor will get back to you!')
+        messages.success(request, 'Your request has been submitted, and a realtor will get back to you!')
         return redirect('/listings/'+listing_id)
